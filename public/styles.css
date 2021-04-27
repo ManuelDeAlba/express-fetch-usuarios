@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: sans-serif;
+	min-height: 100vh;
+	background: #181622;
+	color: #fff;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	padding: 30px 0;
+}
+/* NAVEGACION */
+.nav{
+	height: 50px;
+	background: #222235;
+	display: flex;
+	align-items: center;
+}
+.nav .contenedor{
+	padding: 0;
+}
+.nav__link{
+	text-decoration: none;
+	display: inline-block;
+	line-height: 50px;
+	padding: 0 20px;
+	margin-right: 10px;
+	color: #fff;
+}
+.nav__link{
+	background: rgba(255,255,255,.1);
+	transition: background .2s;
+}
+.nav__link:hover{
+	background: rgba(255,255,255,.2);
+}
+
+/* PÁGINA */
+h1{
+	text-align: center;
+}
+h2{
+	margin-top: 30px;
+}

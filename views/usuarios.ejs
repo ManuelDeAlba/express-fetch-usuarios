@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Usuario <%= response.id %></title>
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<!-- NAVEGACIÓN -->
+	<nav class="nav">
+		<div class="contenedor">
+			<a href="../" class="nav__link">Regresar</a>
+			<% if(response.id > min) { %>
+				<a href="./<%= response.id - 1%>" class="nav__link">Anterior</a>
+			<% } %>
+			<% if(response.id < max) { %>
+				<a href="./<%= response.id + 1 %>" class="nav__link">Siguiente</a>
+			<% } %>
+		</div>
+	</nav>
+
+	<!-- PÁGINA CON LOS DATOS DE CADA USUARIO -->
+	<div class="contenedor">
+		<h1>Datos Usuario <%- response.id %></h1>
+
+		<h2>Nombre</h2>
+		<p><%= response.name %></p>
+
+		<h2>Nombre de usuario</h2>
+		<p><%= response.username %></p>
+
+		<h2>Correo electrónico</h2>
+		<p><%= response.email %></p>
+
+		<h2>Dirección</h2>
+		<p><%= response.address.street %></p>	
+		<p><%= response.address.suite %></p>
+		<p><%= response.address.city %></p>
+		<p><%= response.address.zipcode %></p>
+
+		<h2>Ubicación</h2>
+		<p>Latitud: <%= response.address.geo.lat %></p>
+		<p>Longitud: <%= response.address.geo.lng %></p>
+
+		<h2>Número de celular</h2>
+		<p><%= response.phone %></p>
+
+		<h2>Sitio web</h2>
+		<p><%= response.website %></p>
+
+		<h2>Compañía</h2>
+		<p><%= response.company.name %></p>
+		<p><%= response.company.catchPhrase %></p>
+		<p><%= response.company.bs %></p>
+	</div>
+</body>
+</html>

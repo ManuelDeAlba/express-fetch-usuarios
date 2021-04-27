@@ -1,0 +1,21 @@
+{
+  "name": "recordar-node",
+  "version": "1.0.0",
+  "description": "Prueba para recordar como se usa express",
+  "main": "nodenode.js",
+  "scripts": {
+    "start": "node nodenode.js",
+    "dev": "nodemon nodenode.js"
+  },
+  "author": "Manuel",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
